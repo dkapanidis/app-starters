@@ -5,7 +5,7 @@
 Run locally
 
 ```shellsession
-$ python3 app.py
+$ python3 src/app.py
 ```
 
 Run with Docker

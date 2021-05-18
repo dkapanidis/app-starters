@@ -5,7 +5,7 @@
 Run locally
 
 ```shellsession
-$ python3 -m flask run
+$ FLASK_APP=src/app.py python3 -m flask run
 ```
 
 Run with Docker
