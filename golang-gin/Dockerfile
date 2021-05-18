@@ -2,7 +2,7 @@
 FROM golang:1.14.2-alpine AS build
 RUN apk add upx
 WORKDIR /app
-COPY go.* .
+COPY go.* ./
 RUN go mod download
 COPY . .
 RUN CGO_ENABLED=0 go test -v ./...
