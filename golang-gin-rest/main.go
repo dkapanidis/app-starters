@@ -9,7 +9,7 @@ import (
 func main() {
 	r := routers.SetupRouter()
 
-	addr := flag.String("address", "localhost:8080", "server address (default: 'localhost:8080')")
+	addr := flag.String("address", "0.0.0.0:8080", "server address (default: '0.0.0.0:8080')")
 	flag.Parse()
 
 	r.Run(*addr)
