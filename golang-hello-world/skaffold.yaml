@@ -7,8 +7,3 @@ deploy:
   kubectl:
     manifests:
       - k8s/*
-portForward:
-- resourceType: deployment
-  resourceName: golang-hello-world
-  port: 8080
-
