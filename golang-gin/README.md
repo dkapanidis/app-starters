@@ -13,8 +13,8 @@ $ ./golang-gin
 Run with Docker
 
 ```shellsession
-$ docker build -t golang-hello-world .
-$ docker run -p8080:8080 golang-hello-world
+$ docker build -t golang-gin .
+$ docker run -p8080:8080 golang-gin
 ```
 
 Open http://localhost:8080
