@@ -1,13 +1,13 @@
-# Golang hello world
+# Golang Gin
 
-> Runs a simple Go Web server without dependencies.
+> Runs a simple Go web server using Gin framework.
 
 Run locally
 
 ```shellsession
 $ go run main.go
 $ go build
-$ ./golang-hello-world
+$ ./golang-gin
 ```
 
 Run with Docker
