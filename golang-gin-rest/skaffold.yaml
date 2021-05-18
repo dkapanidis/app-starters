@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta16
+kind: Config
+build:
+  artifacts:
+  - image: skaffold-example
+  cluster:
+    pullSecretName: e2esecret-with-path
+    pullSecretPath:     kaniko-secret.json
+    namespace: default
+deploy:
+  kubectl:
+    manifests:
+      - k8s-*

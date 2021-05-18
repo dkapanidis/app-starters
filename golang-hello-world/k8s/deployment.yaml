@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golang-hello-world
+  labels:
+    app: golang-hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: golang-hello-world
+  template:
+    metadata:
+      labels:
+        app: golang-hello-world
+    spec:
+      containers:
+        - name: golang-hello-world
+          image: golang-hello-world
+          ports:
+            - containerPort: 8080
