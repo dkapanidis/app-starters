@@ -20,7 +20,7 @@ $ docker run -p8080:8080 golang-hello-world
 Run with Skaffold
 
 ```shellsession
-$ skaffold dev
+$ skaffold dev --port-forward
 ```
 
 Open http://localhost:8080
