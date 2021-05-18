@@ -17,6 +17,13 @@ $ docker build -t golang-hello-world .
 $ docker run -p8080:8080 golang-hello-world
 ```
 
+Run with Pack & Docker
+
+```shellsession
+$ pack build --builder=gcr.io/buildpacks/builder golang-hello-world
+$ docker run -p8080:8080 golang-hello-world
+```
+
 Run with Skaffold
 
 ```shellsession
