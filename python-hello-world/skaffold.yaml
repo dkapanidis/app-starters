@@ -3,20 +3,5 @@ kind: Config
 build:
   artifacts:
   - image: python-hello-world
-
-profiles:
-  - name: dev
-    activation:
-      - command: dev
-    build:
-      artifacts:
-      - image: python-hello-world
-        docker:
-          buildArgs:
-            DEBUG: 1
-        sync:
-          manual:
-          # Sync all the python files that are in the src folder
-          # with the container src folder
-          - src: 'src/**/*.py'
-            dest: .
+    buildpacks:
+      builder: "gcr.io/buildpacks/builder:v1"
