@@ -3,7 +3,6 @@ package routers
 import (
 	"github.com/dkapanidis/app-starters/golang-gin-rest/pkg/apis"
 	"github.com/dkapanidis/app-starters/golang-gin-rest/pkg/clients/prometheus"
-	"github.com/dkapanidis/app-starters/golang-gin-rest/pkg/store"
 	"github.com/gin-gonic/gin"
 	ginprometheus "github.com/zsais/go-gin-prometheus"
 )
@@ -33,7 +32,6 @@ func SetupRouter() *gin.Engine {
 
 	// // Recovery middleware recovers from any panics and writes a 500 if there was one.
 	r.Use(gin.Recovery())
-	store.Connect()
 	r = SetupEndpoints(r)
 
 	return r

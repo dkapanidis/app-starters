@@ -15,7 +15,6 @@ import (
 
 func TestListMoviesWithFuncOK(t *testing.T) {
 	// prepare
-	store.Connect()
 	w := httptest.NewRecorder()
 	c, _ := gin.CreateTestContext(w)
 
@@ -29,7 +28,6 @@ func TestListMoviesWithFuncOK(t *testing.T) {
 
 func TestPostMovieWithRouterOK(t *testing.T) {
 	// prepare
-	store.Connect()
 	router := gin.New()
 	router.POST("/api/movies", PostMovie)
 
@@ -51,7 +49,6 @@ func TestPostMovieWithRouterOK(t *testing.T) {
 
 func TestPostMovieWithRouterErrorInvalidID(t *testing.T) {
 	// prepare
-	store.Connect()
 	router := gin.New()
 	router.POST("/api/movies", PostMovie)
 
@@ -74,7 +71,6 @@ func TestPostMovieWithRouterErrorInvalidID(t *testing.T) {
 
 func TestPostMovieWithRouterErrorNameIsRequired(t *testing.T) {
 	// prepare
-	store.Connect()
 	router := gin.New()
 	router.POST("/api/movies", PostMovie)
 
@@ -94,7 +90,6 @@ func TestPostMovieWithRouterErrorNameIsRequired(t *testing.T) {
 
 func TestGetMovieWithRouterOK(t *testing.T) {
 	// prepare
-	store.Connect()
 	router := gin.New()
 	router.GET("/api/movies/:id", GetMovie)
 
@@ -119,7 +114,6 @@ func TestGetMovieWithRouterOK(t *testing.T) {
 
 func TestGetMovieErrorNotFound(t *testing.T) {
 	// prepare
-	store.Connect()
 	router := gin.New()
 	router.GET("/api/movies/:id", GetMovie)
 
@@ -142,7 +136,6 @@ func TestGetMovieErrorNotFound(t *testing.T) {
 
 func TestPutMovieWithRouterOK(t *testing.T) {
 	// prepare
-	store.Connect()
 	router := gin.New()
 	router.PUT("/api/movies/:id", PutMovie)
 
@@ -168,7 +161,6 @@ func TestPutMovieWithRouterOK(t *testing.T) {
 
 func TestPutMovieErrorNotFound(t *testing.T) {
 	// prepare
-	store.Connect()
 	router := gin.New()
 	router.PUT("/api/movies/:id", PutMovie)
 
@@ -192,7 +184,6 @@ func TestPutMovieErrorNotFound(t *testing.T) {
 
 func TestPutMovieWithRouterErrorNameIsRequired(t *testing.T) {
 	// prepare
-	store.Connect()
 	router := gin.New()
 	router.PUT("/api/movies/:id", PutMovie)
 
@@ -215,7 +206,6 @@ func TestPutMovieWithRouterErrorNameIsRequired(t *testing.T) {
 
 func TestDeleteMovieOK(t *testing.T) {
 	// prepare
-	store.Connect()
 	router := gin.New()
 	router.DELETE("/api/movies/:id", DeleteMovie)
 

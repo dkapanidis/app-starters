@@ -3,6 +3,8 @@ kind: Config
 build:
   artifacts:
   - image: golang-gin-rest
+    buildpacks:
+      builder: "gcr.io/buildpacks/builder:v1"
 deploy:
   kubectl:
     manifests:
