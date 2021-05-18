@@ -1,6 +1,6 @@
 # Golang Flask
 
-> Runs a simple Python Web server with Flask.
+> Runs a simple Python Web server using Flask, with unit tests.
 
 Run locally
 
