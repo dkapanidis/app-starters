@@ -17,6 +17,13 @@ $ docker build -t golang-gin-rest .
 $ docker run -p8080:8080 golang-gin-rest
 ```
 
+Run with Pack & Docker
+
+```shellsession
+$ pack build --builder=gcr.io/buildpacks/builder golang-gin-rest
+$ docker run -p8080:8080 golang-gin-rest
+```
+
 Run with Skaffold
 
 ```shellsession
