@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: golang-gin-rest
+  labels:
+    app: golang-gin-rest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: golang-gin-rest
+  template:
+    metadata:
+      labels:
+        app: golang-gin-rest
+    spec:
+      containers:
+        - name: golang-gin-rest
+          image: golang-gin-rest
+          ports:
+            - containerPort: 8080
