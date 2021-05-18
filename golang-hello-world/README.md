@@ -17,4 +17,11 @@ $ docker build -t golang-hello-world .
 $ docker run -p8080:8080 golang-hello-world
 ```
 
+Run with Skaffold
+
+```shellsession
+$ skaffold dev
+```
+
 Open http://localhost:8080
+
