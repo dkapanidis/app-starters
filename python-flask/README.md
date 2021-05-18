@@ -15,6 +15,13 @@ $ docker build -t python-flask .
 $ docker run -p5000:5000 python-flask
 ```
 
+Run with Pack & Docker
+
+```shellsession
+$ pack build --builder=gcr.io/buildpacks/builder python-flask
+$ docker run -p5000:5000 python-flask
+```
+
 Run with Skaffold
 
 ```shellsession
