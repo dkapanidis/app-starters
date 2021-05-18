@@ -46,7 +46,7 @@ func TestPostMovieWithRouterOK(t *testing.T) {
 
 	// assert
 	assert.Equal(t, 201, w.Code)
-	assert.Regexp(t, `{"ID":1,"CreatedAt":".*","UpdatedAt":".*","DeletedAt":null,"name":"godfather"}`, w.Body.String())
+	assert.Regexp(t, `{"ID":1,"name":"godfather"}`, w.Body.String())
 }
 
 func TestPostMovieWithRouterErrorInvalidID(t *testing.T) {
@@ -114,7 +114,7 @@ func TestGetMovieWithRouterOK(t *testing.T) {
 
 	// assert
 	assert.Equal(t, 200, w.Code)
-	assert.Regexp(t, `{"ID":1,"CreatedAt":".*","UpdatedAt":".*","DeletedAt":null,"name":"godfather"}`, w.Body.String())
+	assert.Regexp(t, `{"ID":1,"name":"godfather"}`, w.Body.String())
 }
 
 func TestGetMovieErrorNotFound(t *testing.T) {
@@ -163,7 +163,7 @@ func TestPutMovieWithRouterOK(t *testing.T) {
 
 	// assert
 	assert.Equal(t, 200, w.Code)
-	assert.Regexp(t, `{"ID":1,"CreatedAt":".*","UpdatedAt":".*","DeletedAt":null,"name":"godfather 2"}`, w.Body.String())
+	assert.Regexp(t, `{"ID":1,"name":"godfather 2"}`, w.Body.String())
 }
 
 func TestPutMovieErrorNotFound(t *testing.T) {
