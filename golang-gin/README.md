@@ -17,4 +17,10 @@ $ docker build -t golang-gin .
 $ docker run -p8080:8080 golang-gin
 ```
 
+Run with Skaffold
+
+```shellsession
+$ skaffold dev --port-forward
+```
+
 Open http://localhost:8080
