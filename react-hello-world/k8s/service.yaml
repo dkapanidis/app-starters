@@ -7,7 +7,7 @@ metadata:
 spec:
   clusterIP: None
   ports:
-    - port: 3000
+    - port: 80
       name: react-hello-world
   selector:
     app: react-hello-world

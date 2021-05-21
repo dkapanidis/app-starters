@@ -18,4 +18,4 @@ spec:
         - name: react-hello-world
           image: react-hello-world
           ports:
-            - containerPort: 3000
+            - containerPort: 80
