@@ -30,7 +30,7 @@ Run with Pack & Docker
 
 ```shellsession
 $ pack build --builder=gcr.io/buildpacks/builder react-hello-world
-$ docker run -p3000:3000 react-hello-world
+$ docker run -p3000:8080 react-hello-world
 ```
 
 Run with Skaffold
@@ -40,4 +40,3 @@ $ skaffold dev --port-forward
 ```
 
 Open http://localhost:3000
-
