@@ -3,5 +3,18 @@ kind: Config
 build:
   artifacts:
   - image: react-hello-world
-    buildpacks:
-      builder: "gcr.io/buildpacks/builder:v1"
+profiles:
+  - name: dev
+    activation:
+      - command: dev
+    build:
+      artifacts:
+      - image: react-hello-world
+        docker:
+          dockerfile: Dockerfile.dev
+        sync:
+          manual:
+          # Sync all the TypeScript files that are in the src folder
+          # with the container src folder
+          - src: 'src/**/*.ts*'
+            dest: .
